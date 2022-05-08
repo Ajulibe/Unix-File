@@ -1,0 +1,11 @@
+var
+This is a text Over several lines
+This is a text
+Over several
+lines
+$var
+33
+sever
+2*(5+5)
+2*(5+5) 
+20

@@ -1,0 +1,2 @@
+./script9.sh: line 5: [: -gt: unary operator expected
+The resulted number is 0

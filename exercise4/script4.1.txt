@@ -1,0 +1,44 @@
+echo ${#arr}
+output: 5
+explanation: This is the length of the first element in the array
+
+echo ${#arr[*]}
+output: 5
+explanation: This is the length of the entire array
+
+echo "${arr}"
+output: epita
+explanation: This is the first element in the array
+
+echo "${arr[@]}"
+output: epita is the best school
+explanation: List of all the elements in the array
+
+echo ${#arr[0]}
+output: 5
+explanation: The length of the first element in the array which is at index 0
+
+
+echo ${#arr[1]}
+output: 2
+explanation: The length of the second element in the array which is at index 1
+
+
+echo ${#arr[2]}
+output: 3
+explanation: The length of the third element in the array which is at index 2
+
+
+echo ${#arr[3]}
+output: 4
+explanation: The length of the fourth element in the array which is at index 3
+
+
+echo "${arr[@]:3}"
+output: best school
+explanation: Retrieve all elements in the array starting index 3
+
+
+echo "${arr[@]:2:2}"
+output: the best
+explanation: Retrieve 2 elements in the array starting from index 2
