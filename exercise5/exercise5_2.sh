@@ -1,19 +1,20 @@
 #!/bin/bash
 
-input="marks.csv"
+ read -p "enter the name of the file: " input
+
 
 while IFS= read -r line
 do
   IFS=';'
   read -ra ADDR <<<"$line" #reading str as an array as tokens separated by IFS
   echo '--------------------------------------'
-  # echo "${ADDR[@]}"
+
   for i in "${!ADDR[@]}"; do
   if [[ ${i} == 2 ]] || [[ ${i} == 3 ]] || [[ ${i} == 4 ]]
   then
   # # check the values to be sure of the ranfe
   new_index=$((i))
-  # echo "new_index: ${i}"
+
   if [[ "${ADDR[new_index]}" -ge '18' ]]
   then
   ADDR[new_index]='A'
@@ -36,6 +37,6 @@ do
   fi
   done
   echo "${ADDR[@]}"
-  # echo "${ADDR[3]}" | cut -d "!" -f 2
+
   echo '--------------------------------------'
 done < "$input"

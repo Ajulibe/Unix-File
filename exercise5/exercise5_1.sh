@@ -1,6 +1,6 @@
 #!/bin/bash
+read -p "enter the name of the file: " input
 
-input="file.txt"
 
 while IFS= read -r line
 do
