@@ -25,7 +25,7 @@ read -p 'enter your second operand: ' operand2
 function checkoperand2(){
 if [[ -z "$operand2" ]]
 then
-   read -p 'Operand 2 cannot be empty!!! enter your first operand: ' operand2
+   read -p 'Operand 2 cannot be empty!!! enter your second operand: ' operand2
 
    if [[ -z "$operand2" ]]
    then
@@ -65,7 +65,7 @@ case "$operator" in
       echo $difference
       ;;
    "x")
-      multiplier=$(($operand1$operator$operand2))
+      multiplier=$((operand1*operand2))
       echo $multiplier
       ;;
     "/")

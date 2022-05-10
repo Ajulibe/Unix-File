@@ -1,1 +1,3 @@
-mv: script8.txt is not a directory
+renamed 'f1.doc' -> 'f1.txt'
+renamed 'f2.doc' -> 'f2.txt'
+renamed 'f3.doc' -> 'f3.txt'
