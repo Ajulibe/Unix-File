@@ -1,7 +1,8 @@
 #!/bin/bash
 
-read -p 'enter your first operand: ' operand1
-
+operand1=''
+operand2=''
+operator=''
 
 function checkoperand1(){
 if [[ -z "$operand1" ]]
@@ -15,13 +16,6 @@ then
 fi
 }
 
-checkoperand1
-
-
-echo '-------------------------------'
-
-read -p 'enter your second operand: ' operand2
-
 function checkoperand2(){
 if [[ -z "$operand2" ]]
 then
@@ -34,13 +28,6 @@ then
 fi
 }
 
-checkoperand2
-
-echo '-------------------------------'
-
-read -p "enter your operator (either +, -, x, /, pow, mod): " operator
-
-
 function checkoperator(){
 if [[ -z "$operator" ]]
 then
@@ -52,7 +39,39 @@ then
 fi
 }
 
-checkoperator
+
+
+
+if [[ -z $1 ]]
+then
+  read -p 'enter your first operand: ' input
+  operand1=$input
+  checkoperand1
+else
+  operand1=$1
+fi
+
+if [[ -z $2 ]]
+then
+  read -p 'enter your second operand: ' input
+  operand2=$input
+  checkoperand2
+else
+  operand2=$2
+fi
+
+
+if [[ -z $3 ]]
+then
+  read -p 'enter your operator (either +, -, x, /, pow, mod): ' input
+  operator=$input
+  checkoperator
+else
+  operator=$3
+fi
+
+
+
 
 function hello(){
 case "$operator" in
