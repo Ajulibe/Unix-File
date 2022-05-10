@@ -1,7 +1,5 @@
 #!/bin/bash
 
- read -p "enter the name of the file: " input
-
 
 while IFS= read -r line
 do
@@ -39,4 +37,4 @@ do
   echo "${ADDR[@]}"
 
   echo '--------------------------------------'
-done < "$input"
+done < "$1"

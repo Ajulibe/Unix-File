@@ -1,6 +1,4 @@
 #!/bin/bash
-read -p "enter the name of the file: " input
-
 
 while IFS= read -r line
 do
@@ -10,5 +8,5 @@ do
   echo "${ADDR[0]} ${ADDR[1]}"
   echo "${ADDR[3]}" | cut -d "!" -f 2
   echo '--------------------------------------'
-done < "$input"
+done < "$1"
 
